@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <title>MRCOG</title>
+    <!--favicon-->
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/fontawesome/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/feather.css" />
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body class="pop-modal">
+    <div class="main-wrapper">
+      <!-- nav-menu -->
+      <header class="container-fluid">
+        <nav class="navbar fixed-top bg-light navbar-expand-lg py-0 shadow-sm">
+          <div class="container">
+            <a
+              class="navbar-brand"
+              href="#"
+              data-aos="fade-right"
+              data-aos-duration="1900"
+            >
+              <img
+                class="logo-image"
+                src="./img/new_logo.png"
+                alt="Logo_name"
+                srcset=""
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li
+                  class="nav-item"
+                  data-aos="fade-down"
+                  data-aos-duration="500"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    >Home</a
+                  >
+                </li>
+                <li
+                  class="nav-item"
+                  data-aos="fade-down"
+                  data-aos-duration="900"
+                >
+                  <a class="nav-link" href="./about.html">About</a>
+                </li>
+
+                <li
+                  class="nav-item"
+                  data-aos="fade-down"
+                  data-aos-duration="1000"
+                >
+                  <a class="nav-link" href="./course.html">Course</a>
+                </li>
+
+                <li
+                  class="nav-item"
+                  data-aos="fade-down"
+                  data-aos-duration="1200"
+                >
+                  <a class="nav-link" href="./Feedback.html">Feedback</a>
+                </li>
+                <li
+                  class="nav-item"
+                  data-aos="fade-down"
+                  data-aos-duration="1400"
+                >
+                  <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+              </ul>
+              <form
+                class="d-flex"
+                role="search"
+                data-aos="fade-left"
+                data-aos-duration="1900"
+              >
+                <a
+                  href="sign-in-sign-up.html"
+                  class="btn btn-outline-success w-200"
+                  type="submit"
+                  ><i class="fa-solid fa-arrow-right-to-bracket"></i> Login /
+                  <i class="fa-solid fa-user-plus"></i> Register</a
+                >
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- end -->
+
+      <div class="page-content" style="margin-top: 100px">
+        <div class="container">
+          <div class="row">
+            <!-- 1st box -->
+            <div
+              class="col-xl-3 col-md-4 theiaStickySidebar"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+            >
+              <div class="settings-widget dash-profile mb-3">
+                <div class="settings-menu p-0">
+                  <div class="profile-bg">
+                    <h5>Beginner</h5>
+                    <img src="assets/img/profile-bg.jpg" alt="" />
+                    <div class="profile-img">
+                      <a href="student-profile.html"
+                        ><img src="assets/img/user/user11.jpg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="profile-group">
+                    <div class="profile-name text-center">
+                      <h4><a href="student-profile.html">Rolands R</a></h4>
+                      <p>Student</p>
+                    </div>
+                    <div class="go-dashboard text-center">
+                      <a href="student-dashboard.html" class="btn btn-primary"
+                        >Go to Dashboard</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-widget account-settings">
+                <div class="settings-menu">
+                  <h3>ACCOUNT SETTINGS</h3>
+                  <ul>
+                    <li class="nav-item">
+                      <a href="student-profile.html" class="nav-link">
+                        <i class="feather-settings"></i> Edit Profile
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="setting-student-security.html" class="nav-link">
+                        <i class="feather-user"></i> Security
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a
+                        href="setting-student-delete-profile.html"
+                        class="nav-link"
+                      >
+                        <i class="feather-trash-2"></i> Delete Profile
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="sign-in-sign-up.html" class="nav-link">
+                        <i class="feather-power"></i> Sign Out
+                      </a>
+                    </li>
+                  </ul>
+                  <h3>SUBSCRIPTION</h3>
+                  <ul>
+                    <li class="nav-item">
+                      <a
+                        href="setting-student-subscription.html"
+                        class="nav-link"
+                      >
+                        <i class="feather-calendar"></i> My Subscriptions
+                      </a>
+                    </li>
+
+                    <li class="nav-item active">
+                      <a href="setting-student-payment.html" class="nav-link">
+                        <i class="feather-credit-card"></i> Payment
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-9 col-md-8"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+            >
+              <div class="settings-widget profile-details">
+                <div class="settings-inner-blk p-0">
+                  <div class="profile-heading">
+                    <h3>Payment Methods</h3>
+                    <p>Primary payment method is used by default</p>
+                  </div>
+                  <div class="comman-space">
+                    <div class="settings-btn-grp hvr-sweep-to-right">
+                      <a
+                        href="#"
+                        data-bs-toggle="modal"
+                        data-bs-target="#addpaymentMethod"
+                        >Add Payment Method</a
+                      >
+                    </div>
+                    <div class="payment-method-blk">
+                      <div class="payment-list d-flex align-items-center">
+                        <div class="me-auto">
+                          <h5>Visa ending in 1234</h5>
+                          <p>Expires in 10/2021</p>
+                        </div>
+                        <div>
+                          <ul class="grp-action-style inline-inline">
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                class="btn btn-action-style btn-action-primary"
+                                >primary</a
+                              >
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Edit"
+                                class="btn btn-action-style btn-action-dark"
+                                ><i class="fa-regular fa-pen-to-square"></i
+                              ></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Make it Primary"
+                                class="btn btn-action-style btn-action-method"
+                                ><i class="fa-regular fa-credit-card"></i
+                              ></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Remove"
+                                class="btn btn-action-style btn-action-delete"
+                                ><i class="fa-regular fa-trash-can"></i
+                              ></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="payment-list d-flex align-items-center">
+                        <div class="me-auto">
+                          <h5>Mastercard ending in 1234</h5>
+                          <p>Expires in 10/2021</p>
+                        </div>
+                        <div>
+                          <ul class="grp-action-style inline-inline">
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                class="btn btn-action-style btn-action-primary"
+                                >primary</a
+                              >
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Edit"
+                                class="btn btn-action-style btn-action-dark"
+                                ><i class="fa-regular fa-pen-to-square"></i
+                              ></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Make it Primary"
+                                class="btn btn-action-style btn-action-method"
+                                ><i class="fa-regular fa-credit-card"></i
+                              ></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Remove"
+                                class="btn btn-action-style btn-action-delete"
+                                ><i class="fa-regular fa-trash-can"></i
+                              ></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="payment-list d-flex align-items-center">
+                        <div class="me-auto">
+                          <h5>Discover ending in 1234</h5>
+                          <p>Expires in 10/2021</p>
+                        </div>
+                        <div>
+                          <ul class="grp-action-style inline-inline">
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                class="btn btn-action-style btn-action-primary"
+                                >primary</a
+                              >
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Edit"
+                                class="btn btn-action-style btn-action-dark"
+                                ><i class="fa-regular fa-pen-to-square"></i
+                              ></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Make it Primary"
+                                class="btn btn-action-style btn-action-method"
+                                ><i class="fa-regular fa-credit-card"></i
+                              ></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Remove"
+                                class="btn btn-action-style btn-action-delete"
+                                ><i class="fa-regular fa-trash-can"></i
+                              ></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="payment-list d-flex align-items-center">
+                        <div class="me-auto">
+                          <h5>American Express ending in 1234</h5>
+                          <p>Expires in 10/2021</p>
+                        </div>
+                        <div>
+                          <ul class="grp-action-style inline-inline">
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                class="btn btn-action-style btn-action-primary"
+                                >primary</a
+                              >
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Edit"
+                                class="btn btn-action-style btn-action-dark"
+                                ><i class="fa-regular fa-pen-to-square"></i
+                              ></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Make it Primary"
+                                class="btn btn-action-style btn-action-method"
+                                ><i class="fa-regular fa-credit-card"></i
+                              ></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Remove"
+                                class="btn btn-action-style btn-action-delete"
+                                ><i class="fa-regular fa-trash-can"></i
+                              ></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="payment-list d-flex align-items-center">
+                        <div class="me-auto">
+                          <h5>Paypal Express ending in 1234</h5>
+                          <p>Expires in 10/2021</p>
+                        </div>
+                        <div>
+                          <ul class="grp-action-style inline-inline">
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Edit"
+                                class="btn btn-action-style btn-action-dark"
+                                ><i class="fa-regular fa-pen-to-square"></i
+                              ></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Make it Primary"
+                                class="btn btn-action-style btn-action-method"
+                                ><i class="fa-regular fa-credit-card"></i
+                              ></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a
+                                href="javascript:;"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Remove"
+                                class="btn btn-action-style btn-action-delete"
+                                ><i class="fa-regular fa-trash-can"></i
+                              ></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Model -->
+    <div
+      class="modal-styles modal fade"
+      id="addpaymentMethod"
+      tabindex="-1"
+      aria-labelledby="addpaymentMethod"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add New Payment Method</h5>
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="addpaymethod-form add-course-info">
+              <form action="#">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="wallet-method">
+                      <label class="radio-inline custom_radio me-4">
+                        <input type="radio" name="optradio" checked="" />
+                        <span class="checkmark"></span> Credit or Debit card
+                      </label>
+                      <label class="radio-inline custom_radio">
+                        <input type="radio" name="optradio" />
+                        <span class="checkmark"></span> PayPal
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-control-label">Card Number</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="XXXX XXXX XXXX XXXX"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form-group">
+                      <label class="form-label">Month</label>
+                      <select class="form-select select" name="sellist1">
+                        <option>Month</option>
+                        <option>Brazil</option>
+                        <option>French</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form-group">
+                      <label class="form-label">Year</label>
+                      <select class="form-select select" name="sellist1">
+                        <option>Year</option>
+                        <option>India</option>
+                        <option>America</option>
+                        <option>London</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form-group">
+                      <label class="form-control-label">CVV Code </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="XXXX"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group mb-0">
+                      <label class="form-control-label">Name on Card</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Address"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer me-auto">
+            <button type="button" class="btn btn-modal-style btn-theme">
+              Save changes
+            </button>
+            <button
+              type="button"
+              class="btn btn-modal-style btn-cancel"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Model Ends -->
+    <!-- =====footer-part==== -->
+    <footer class="position-relative">
+      <!-- news-letter -->
+      <div
+        class="container-fluid new"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div class="news-letter container w-100">
+          <div class="row">
+            <div class="col-md-6 news-letterhead">
+              <h1>Join our mailing list</h1>
+            </div>
+            <div class="col-md-6 input-box position-relative">
+              <input type="text" />
+              <button class="btn btn-outline-success d-flex align-items-center">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+      <div class="container pt-40">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>About Us</h3>
+            </div>
+            <div class="para-footer">
+              <p class="para-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis impedit laboriosam nesciunt laborum delectus ex
+                asperiores doloribus nam in aperiam.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>Ouick Links</h3>
+            </div>
+            <div class="para-footer">
+              <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Course</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>Courses</h3>
+            </div>
+            <div class="para-footer">
+              <ul>
+                <li>Become a Instructor</li>
+                <li>Instructor</li>
+                <li>Student Profile</li>
+                <li>Library</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>Contact</h3>
+            </div>
+            <div class="Address_info">
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i> no:40,Middle
+                  Street,new york..
+                </li>
+                <li><i class="fa-solid fa-phone-volume"></i> 91 3887449854</li>
+                <li><i class="fa-solid fa-envelope"></i> test@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 d-flex align-items-center">
+              <p class="para-justify">Copyright © 2023 All right Reserved</p>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-end">
+              <div class="d-flex icon pos-rel">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-skype"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- =====footer-part end==== -->
+
+    <script
+      data-cfasync="false"
+      src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+    <script src="assets/plugins/feather/feather.min.js"></script>
+    <script src="assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+    <script src="assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Code for animation  starts-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Code for animation  ends-->
+  </body>
+</html>

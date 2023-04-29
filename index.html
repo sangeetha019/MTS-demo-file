@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRCOG</title>
+    <!--favicon-->
+	<link rel="icon" href="admin/assets/images/favicon.png" type="image/png" />
+    <!-- =======css======-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Swiper.css" />
+    <link rel="stylesheet" href="./css/bubbles-animation.css">
+    <!-- =======css end====== -->
+
+    <!-- <========font-awesome======> -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <!-- <========font-awesome end======> -->
+
+
+    <!-- bootsrap-bundle -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Second slider link  -->
+    <link rel="stylesheet" href="./css/owl_courosel.css">
+
+
+    <style>
+        .testimonials {
+            position: relative;
+            max-width: 100%;
+            margin-top: 40px;
+
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 340px;
+            min-height: 400px;
+            margin: 0 20px;
+        }
+
+        .swiper-3d,
+        .swiper-3d.swiper-css-mode .swiper-wrapper {
+            perspective: none;
+        }
+
+        .testimonial_profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-3d .swiper-slide-shadow-left,
+        .swiper-3d .swiper-slide-shadow-right {
+            background-image: none;
+        }
+
+        .testimonials .card {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 50px 40px 30px;
+            text-align: center;
+            overflow: hidden;
+            /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+            border: none;
+        }
+
+        .testimonials .card .layer {
+            position: absolute;
+            top: calc(100% - 2px);
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+        .testimonials .card:hover .layer {
+            top: 0;
+        }
+
+        .testimonials .card .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonials .card .content p {
+            font-size: 15px;
+            line-height: 24px;
+            margin-bottom: 6px;
+            color: #111;
+            padding: 0 6px;
+        }
+
+        .testimonials .card .content .imgBx {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: #b286ec;
+        }
+
+        .testimonials .card .content h3 span {
+            color: #0060ff;
+            font-size: 14px;
+            transition: 0.5s;
+            color: var(--primary-color);
+        }
+
+        .testimonials .card:hover .content h3 span {
+
+            color: #111;
+        }
+
+        @media (max-width:991px) {
+
+            .testimonials .card {
+                padding: 38px 14px 16px;
+            }
+        }
+
+        .testimonial_quotation_box {
+            position: relative;
+        }
+
+        .quotation-image {
+            position: absolute;
+            width: 50px;
+            filter: opacity(0.5);
+            left: 21px;
+            top: -17px;
+        }
+
+        .testimonial__star-icon {
+            color: #f4c803;
+            font-size: 16px;
+            margin: 17px 0 6px;
+
+        }
+
+        .testimonial__star-icon i {
+            color: #f4c803;
+        }
+
+        @media (max-width:567px) {
+            .swiper-slide {
+                width: 272px;
+            }
+        }
+        /*** ====================== Features One ========================***/
+        .features-one {
+            position: relative;
+            display: block;
+            /* background: #ffffff; */
+            background: #172551;
+            padding: 60px 0px 60px;
+        }
+
+        .features-one__single {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+            padding: 35px 40px 26px;
+            transition: all 200ms linear;
+            transition-delay: 0.1s;
+            border: 1px solid #ffffff;
+            margin-bottom: 30px;
+            height: 130px;
+        }
+
+        .features-one__single:hover {
+            border: 1px solid #377dff;
+        }
+
+        .features-one__single::before {
+            position: absolute;
+            left: -1px;
+            bottom: -1px;
+            right: -1px;
+            height: 10px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            background: #377dff;
+            content: "";
+            transform: scaleY(0);
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.22);
+            z-index: 1;
+        }
+
+        .features-one__single:hover:before {
+            transform: scaleY(1.0);
+        }
+
+        .features-one__single-icon {
+            position: relative;
+            display: block;
+            color: #000;
+            transition: all 500ms ease;
+        }
+
+        .features-one__single:hover .features-one__single-icon {
+            /* transform: rotateY(180deg); */
+            color: #377dff;
+        }
+
+        .features-one__single-icon span::before {
+            font-size: 60px;
+        }
+
+        .features-one__single-text {
+            position: relative;
+            display: block;
+            padding-left: 20px;
+        }
+
+        .features-one__single-text h4 {
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 700;
+        }
+
+        .features-one__single-text h4 a {
+            color: #000;
+            transition: all 200ms linear;
+            transition-delay: 0.1s;
+        }
+
+        .features-one__single-text h4 a:hover {
+            color: #377dff;
+        }
+
+        .features-one__single-text p {
+            margin: 0;
+            line-height: 28px;
+        }
+
+        .features-one__single:hover {
+            border: 1px solid #377dff;
+        }
+
+        section.container-fluid.banner {
+            padding: 20px 0;
+        }
+
+        /* features-one-icon-container styles Start */
+        .features-one-icon-container{
+            position: absolute;
+            left: 20px;
+            opacity: 0.9;
+        }
+        .features-small-icon{
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    box-shadow: 0px 8px 30px 0px rgba(255, 255, 255, 0.5);
+    top: 163px;
+    right: 40px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: hero-bounce;
+}
+        
+        /* features-one-icon-container styles Ends */
+
+        /* counter starts */
+            
+    .title{
+            text-align: center;
+            margin: 1em;
+        }
+        .counters{
+           padding: 3em 2em;
+           /* background-color: #4193ff;
+           background-color: #002d69; */
+           color: #fff;
+           text-align: center;
+        }
+        .counters > div {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 4em 2em;
+        }
+        .counter{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+        .counter h1{
+            font-size: 2.4em;
+            margin-bottom: 0.2em;
+        }
+        .counter:not(:last-child)::before{
+            content:'';
+            /* background-color: #fff; */
+            position: absolute;
+            width: 2px;
+            height: 3em;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -1em;
+        }
+     
+
+        /* counter styles */
+
+        .counter-icon{
+            width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #4193ff;
+    color: white;
+    font-size: 33px;
+    margin-right: 15px;
+        }
+        .counter-des{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-start;
+        }
+        .bg-blue {
+    background: #172551;
+    position: relative;
+}
+        .bg-blue::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background: url(https://peacefulqode.com/themes/medicate/html/images/bg-1.png);
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: 60% auto;
+    background-attachment: fixed;
+}
+.counters h2,h3{
+    color: #fff;
+    font-size: 22px;
+}
+@media screen and(max-width:900px) and (min-width:501px){
+            .counters > div{
+                grid-template-columns: 1fr 1fr;
+            }
+            .counter:nth-child(2)::before{
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:769px){
+            .counters > div{
+                grid-template-columns: 1fr;
+                row-gap: 5em;
+            }
+            .counter:not(:last-child)::before{
+                width: 90%;
+                height: 2px;
+                top: initial;
+                right: initial;
+                bottom: -3em;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .counters h2,h3{
+    font-size: 21px;
+}
+        }
+        /* counter Ends */
+    </style>
+</head>
+<body>
+    <!-- nav-menu -->
+    <header class="container-fluid counter">
+           <nav class="navbar fixed-top bg-light navbar-expand-lg py-0 shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#" data-aos="fade-right" data-aos-duration="1900">
+                    <img class="logo-image" src="./img/new_logo.png" alt="Logo_name" srcset="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" data-aos="fade-down"
+                            data-aos-duration="500">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down"
+                            data-aos-duration="900">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+
+                        <li class="nav-item" data-aos="fade-down"
+                            data-aos-duration="1000">
+                            <a class="nav-link" href="./course.html">Course</a>
+                        </li>
+
+                        <li class="nav-item" data-aos="fade-down"
+                            data-aos-duration="1200">
+                            <a class="nav-link" href="./Feedback.html">Feedback</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down"
+                            data-aos-duration="1400">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                        
+                    </ul>
+                    <form class="d-flex" role="search" data-aos="fade-left" data-aos-duration="1900">
+
+                        <a href="sign-in-sign-up.html" class="btn btn-outline-success w-200" type="submit"><i
+                                class="fa-solid fa-arrow-right-to-bracket"></i> Login / <i
+                                class="fa-solid fa-user-plus"></i> Register</a>
+
+                    </form>
+                </div>
+            </div>    
+          </nav>
+    </header>
+    <!-- end -->
+
+    <!-- banner-part -->
+    <section class="container-fluid banner " style="padding-top: 100px;">
+        <!-- <div class="banner" style="">
+            <img src="./img/Mrcog banner.jpg" alt="" class="w-100">
+        </div> -->
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7" data-aos="zoom-in" data-aos-duration="2000">
+                    
+                    <div class="banner-content">
+                        <h2>Welcome To Online Coaching</h2>
+                        <h1>Get Class From Top Instructor </h1>
+
+                        <p class="para-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit expedita
+                            dolor fugiat voluptatem nihil nesciunt sed nobis dolores tempora adipisci?
+
+                        <div class="d-flex btn-banner" role="search">
+                            <button class="btn btn-outline-success  d-flex align-items-center trans-btn" type="submit">
+                                Explore Courses</button>
+                            <button class="btn btn-outline-success d-flex align-items-center " type="submit"> Contact
+                                us</button>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5" data-aos="zoom-in"  data-aos-duration="3000">
+                    <div class="banner-img position-relative">
+                        <img src="./img/dr13.png" alt="" srcset="" class="w-100">
+                        <div class="aliment-4">
+                            <img src="https://shivaaythemes.in/educater-html/assets/images/banner-aliment-icon-4.png"
+                                alt="icon">
+                        </div> 
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+
+    <!-- second Card Starts -->
+    <section class="ftco-section container-fluid">
+            <div class="container">
+                <div class="row  course-box">
+                    <div class="course-category-title text-center"
+                    data-aos="fade-down" data-aos-duration="900">
+                        <h2 class="h2-subtitle">Our Courses</h2>
+                            <h2 class="h2-title">Our Content Writing Services</h2>
+                    </div>
+                    <div class="col-md-12" >
+                        <div class="featured-carousel owl-carousel">
+                            <div class="item" data-aos="zoom-in" data-aos-duration="1000">
+                                 <div class=" card position-relative course-card p-0">    
+                    <a href="./course-detail.html"></a>
+                    <div class="card-course p-0"><a href="./course-detail.html">
+                        <div class="course-img position-relative mb-0">
+                            <div class="icon-course">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                                <img src="./img/crd-img2.webp" alt="" class="img-responsive">
+                                <div class="position-absolute image-small-card" style="bottom:0px;">
+                                    <p>December 5, 2023</p>
+                                </div>
+                        </div>
+
+                            <div class="course-card-details">
+                                <div class="crd-info-items">
+                                    <ul class="d-flex list-unstyled justify-content-between">
+                                        <li><i class="fa-solid fa-star"></i><span>4.2</span></li>
+                                        <li><i class="fa-solid fa-eye"></i><span>4.5</span></li>
+                                        <li><i class="fa-sharp fa-regular fa-circle-play"></i><span>4.5</span></li>
+                                    </ul>
+                                </div>
+                                <a href="./course-detail.html"><h3 class="card-title my-3">Learn MRCOG-2</h3></a>
+                        
+                                <div class="detail-dec d-flex align-items-center  justify-content-between">
+                                    <a href="#" class="course-card-details__read-more">Read More <i class="fa-solid fa-plus" ></i></a>
+                                             <!-- <div class="author-name">
+                                                <img src="./img/profile-img1.webp" alt="" sizes="" srcset="" >
+                                                <span>Peter Naun</span>
+                                             </div>
+                                             
+                                             
+                                             <div class="rate-list">
+                                                <del class="me-2">$150</del>
+                                                <span>$99.99</span>
+                                             </div> -->
+                                </div>
+                            </div>                 
+                    </div> 
+                                 </div> 
+                            </div>
+                            <div class="item" data-aos="zoom-in" data-aos-duration="1500">
+                                  <div class=" card position-relative course-card p-0">    
+                    <a href="./course-detail.html"></a>
+                    <div class="card-course p-0"><a href="./course-detail.html">
+                        <div class="course-img position-relative mb-0">
+                            <div class="icon-course">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                                <img src="./img/crd-img2.webp" alt="" class="img-responsive">
+                                <div class="position-absolute image-small-card" style="bottom:0px;">
+                                    <p>December 5, 2023</p>
+                                </div>
+                        </div>
+
+                            <div class="course-card-details">
+                                <div class="crd-info-items">
+                                    <ul class="d-flex list-unstyled justify-content-between">
+                                        <li><i class="fa-solid fa-star"></i><span>4.2</span></li>
+                                        <li><i class="fa-solid fa-eye"></i><span>4.5</span></li>
+                                        <li><i class="fa-sharp fa-regular fa-circle-play"></i><span>4.5</span></li>
+                                    </ul>
+                                </div>
+                                <a href="./course-detail.html"><h3 class="card-title my-3">Learn MRCOG-2</h3></a>
+                        
+                                <div class="detail-dec d-flex align-items-center  justify-content-between">
+                                    <a href="#" class="course-card-details__read-more">Read More <i class="fa-solid fa-plus" ></i></a>
+                                             <!-- <div class="author-name">
+                                                <img src="./img/profile-img1.webp" alt="" sizes="" srcset="" >
+                                                <span>Peter Naun</span>
+                                             </div>
+                                             
+                                             
+                                             <div class="rate-list">
+                                                <del class="me-2">$150</del>
+                                                <span>$99.99</span>
+                                             </div> -->
+                                </div>
+                            </div>                 
+                    </div> 
+                                 </div> 
+                            </div>
+                            <div class="item" data-aos="zoom-in" data-aos-duration="2000">
+                                 <div class=" card position-relative course-card p-0">    
+                    <a href="./course-detail.html"></a>
+                    <div class="card-course p-0"><a href="./course-detail.html">
+                        <div class="course-img position-relative mb-0">
+                            <div class="icon-course">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                                <img src="./img/crd-img2.webp" alt="" class="img-responsive">
+                                <div class="position-absolute image-small-card" style="bottom:0px;">
+                                    <p>December 5, 2023</p>
+                                </div>
+                        </div>
+
+                            <div class="course-card-details">
+                                <div class="crd-info-items">
+                                    <ul class="d-flex list-unstyled justify-content-between">
+                                        <li><i class="fa-solid fa-star"></i><span>4.2</span></li>
+                                        <li><i class="fa-solid fa-eye"></i><span>4.5</span></li>
+                                        <li><i class="fa-sharp fa-regular fa-circle-play"></i><span>4.5</span></li>
+                                    </ul>
+                                </div>
+                                <a href="./course-detail.html"><h3 class="card-title my-3">Learn MRCOG-2</h3></a>
+                        
+                                <div class="detail-dec d-flex align-items-center  justify-content-between">
+                                    <a href="#" class="course-card-details__read-more">Read More <i class="fa-solid fa-plus" ></i></a>
+                                             <!-- <div class="author-name">
+                                                <img src="./img/profile-img1.webp" alt="" sizes="" srcset="" >
+                                                <span>Peter Naun</span>
+                                             </div>
+                                             
+                                             
+                                             <div class="rate-list">
+                                                <del class="me-2">$150</del>
+                                                <span>$99.99</span>
+                                             </div> -->
+                                </div>
+                            </div>                 
+                    </div> 
+                                 </div> 
+                            </div>
+                            <div class="item" data-aos="zoom-in" data-aos-duration="2500">
+                                  <div class=" card position-relative course-card p-0">    
+                    <a href="./course-detail.html"></a>
+                    <div class="card-course p-0"><a href="./course-detail.html">
+                        <div class="course-img position-relative mb-0">
+                            <div class="icon-course">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                                <img src="./img/crd-img2.webp" alt="" class="img-responsive">
+                                <div class="position-absolute image-small-card" style="bottom:0px;">
+                                    <p>December 5, 2023</p>
+                                </div>
+                        </div>
+
+                            <div class="course-card-details">
+                                <div class="crd-info-items">
+                                    <ul class="d-flex list-unstyled justify-content-between">
+                                        <li><i class="fa-solid fa-star"></i><span>4.2</span></li>
+                                        <li><i class="fa-solid fa-eye"></i><span>4.5</span></li>
+                                        <li><i class="fa-sharp fa-regular fa-circle-play"></i><span>4.5</span></li>
+                                    </ul>
+                                </div>
+                                <a href="./course-detail.html"><h3 class="card-title my-3">Learn MRCOG-2</h3></a>
+                        
+                                <div class="detail-dec d-flex align-items-center  justify-content-between">
+                                    <a href="#" class="course-card-details__read-more">Read More <i class="fa-solid fa-plus" ></i></a>
+                                             <!-- <div class="author-name">
+                                                <img src="./img/profile-img1.webp" alt="" sizes="" srcset="" >
+                                                <span>Peter Naun</span>
+                                             </div>
+                                             
+                                             
+                                             <div class="rate-list">
+                                                <del class="me-2">$150</del>
+                                                <span>$99.99</span>
+                                             </div> -->
+                                </div>
+                            </div>                 
+                    </div> 
+                                 </div> 
+                            </div>
+                            <div class="item" data-aos="zoom-in" data-aos-duration="2800">
+                                 <div class=" card position-relative course-card p-0">    
+                    <a href="./course-detail.html"></a>
+                    <div class="card-course p-0"><a href="./course-detail.html">
+                        <div class="course-img position-relative mb-0">
+                            <div class="icon-course">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                                <img src="./img/crd-img2.webp" alt="" class="img-responsive">
+                                <div class="position-absolute image-small-card" style="bottom:0px;">
+                                    <p>December 5, 2023</p>
+                                </div>
+                        </div>
+
+                            <div class="course-card-details">
+                                <div class="crd-info-items">
+                                    <ul class="d-flex list-unstyled justify-content-between">
+                                        <li><i class="fa-solid fa-star"></i><span>4.2</span></li>
+                                        <li><i class="fa-solid fa-eye"></i><span>4.5</span></li>
+                                        <li><i class="fa-sharp fa-regular fa-circle-play"></i><span>4.5</span></li>
+                                    </ul>
+                                </div>
+                                <a href="./course-detail.html"><h3 class="card-title my-3">Learn MRCOG-2</h3></a>
+                        
+                                <div class="detail-dec d-flex align-items-center  justify-content-between">
+                                    <a href="#" class="course-card-details__read-more">Read More <i class="fa-solid fa-plus" ></i></a>
+                                             <!-- <div class="author-name">
+                                                <img src="./img/profile-img1.webp" alt="" sizes="" srcset="" >
+                                                <span>Peter Naun</span>
+                                             </div>
+                                             
+                                             
+                                             <div class="rate-list">
+                                                <del class="me-2">$150</del>
+                                                <span>$99.99</span>
+                                             </div> -->
+                                </div>
+                            </div>                 
+                    </div> 
+                                 </div> 
+                            </div>
+                            <div class="item" data-aos="zoom-in" data-aos-duration="3000">
+                              <div class=" card position-relative course-card p-0">    
+                    <a href="./course-detail.html"></a>
+                    <div class="card-course p-0"><a href="./course-detail.html">
+                        <div class="course-img position-relative mb-0">
+                            <div class="icon-course">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                                <img src="./img/crd-img2.webp" alt="" class="img-responsive">
+                                <div class="position-absolute image-small-card" style="bottom:0px;">
+                                    <p>December 5, 2023</p>
+                                </div>
+                        </div>
+
+                            <div class="course-card-details">
+                                <div class="crd-info-items">
+                                    <ul class="d-flex list-unstyled justify-content-between">
+                                        <li><i class="fa-solid fa-star"></i><span>4.2</span></li>
+                                        <li><i class="fa-solid fa-eye"></i><span>4.5</span></li>
+                                        <li><i class="fa-sharp fa-regular fa-circle-play"></i><span>4.5</span></li>
+                                    </ul>
+                                </div>
+                                <a href="./course-detail.html"><h3 class="card-title my-3">Learn MRCOG-2</h3></a>
+                        
+                                <div class="detail-dec d-flex align-items-center  justify-content-between">
+                                    <a href="#" class="course-card-details__read-more">Read More <i class="fa-solid fa-plus" ></i></a>
+                                             <!-- <div class="author-name">
+                                                <img src="./img/profile-img1.webp" alt="" sizes="" srcset="" >
+                                                <span>Peter Naun</span>
+                                             </div>
+                                             
+                                             
+                                             <div class="rate-list">
+                                                <del class="me-2">$150</del>
+                                                <span>$99.99</span>
+                                             </div> -->
+                                </div>
+                            </div>                 
+                               </div> 
+                              </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- second-card Ends -->
+
+    <!-- Intro -->
+    <section class="container-fluid bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="zoom-in"  data-aos-duration="1500">
+                    <div class="about-detail">
+                        <div class="course-category-title text-left">
+                            <h2 class="h2-subtitle">MRCOG </h2>
+                            <h2 class="h2-title">Course Highlights</h2>
+                        </div>
+                        <p class="para-justify">
+                            MRCOG EDGE is an online interactive e-learning platform which would enable candidates to
+                            study as per their convenience and time schedule, and will also help candidates to pass
+                            their MRCOG exam in one go. This course is mentored by <strong>Dr. Kavitha</strong> who is
+                            the esteemed author of the bestselling books for MRCOG exams (Textbook for MRCOG-2: Basic
+                            Sciences in Obstetrics and Gynaecology, An Evidence-Based Clinical Textbook in Obstetrics
+                            and Gynaecology).
+                        </p>
+                        <button class="btn btn-outline-success d-flex align-items-center about-btn" type="submit">Explore More</button>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="zoom-in" data-aos-duration="1800">
+                    <!-- about-us img -->
+                    <img src="./img/about-img1.png" alt="" class="w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Intro End -->
+
+    <!-- features Starts -->
+    <section class="features-one">
+    <!-- sample images sarts -->
+    <div class="features-one-icon-container position-absolute">
+                <img src="https://static.vecteezy.com/system/resources/previews/022/361/452/original/3d-frequently-asked-questions-icon-illustration-render-png.png" alt="video-icon" width="" height="80px" class="features-small-icon">
+    </div>
+
+    
+
+    <!-- sample images Ends -->
+
+        <div class="course-category-title text-center" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="900">
+            <h2 class="h2-subtitle">Course Features</h2>
+            <h2 class="h2-title text-white">Explore Courses Features</h2>
+        </div>
+       
+        <div class="container">
+           
+           
+            <div class="row course-fea">
+                <!--Start Single Features One-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-aos="fade-up"
+                data-aos-duration="500"
+                    style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                    
+                    <a href="./Course_featuredetail.html">
+                    <div class="features-one__single">
+                        <div class="features-one__single-icon">
+                            <img class="dis-yes" src="https://cdn3d.iconscout.com/3d/premium/thumb/play-6568584-5408385.png" alt="icon" width="70px">
+                        </div>
+                        <div class="features-one__single-text">
+                            <h5>Video Lectures</h5>
+                            <p>perfection With Finishing</p>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <!--End Single Features One-->
+
+                <!--Start Single Features One-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp animated"  data-aos="fade-up"
+                data-aos-duration="1000"
+                    style="visibility: visible; animation-duration: 1500ms; animation-delay: 200ms; animation-name: fadeInUp;">
+                    <a href="./Course_featuredetail.html">
+                    <div class="features-one__single">
+                        <div class="features-one__single-icon">
+                            <!-- <img class="dis-yes" src="./img/icons/note.png" alt="icon"> -->
+                            <img class="dis-yes" src="https://cdn3d.iconscout.com/3d/premium/thumb/write-note-5727460-4800432.png?f=webp" alt="icon" width="80px">
+                        </div>
+                        <div class="features-one__single-text">
+                            <h5>Lecture Notes</h5>
+                            <p>Quality Products</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <!--End Single Features One-->
+
+                <!--Start Single Features One-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-aos="fade-up"
+                data-aos-duration="1300"
+                    style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;">
+                    <a href="./Course_featuredetail.html">
+                    <div class="features-one__single">
+                        <div class="features-one__single-icon">
+                            <img class="dis-yes" src="https://cdn3d.iconscout.com/3d/premium/thumb/notes-6819901-5604689.png" alt="icon" width="80px">
+                        </div>
+                        <div class="features-one__single-text">
+                            <h5>Mock Exam</h5>
+                            <p>Safe and trustworthy </p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <!--End Single Features One-->
+
+                <!--Start Single Features One-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-aos="fade-up"
+                 data-aos-duration="1800"
+                    style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;">
+                    <a href="./Course_featuredetail.html">
+                    <div class="features-one__single">
+                        <div class="features-one__single-icon">
+                            <img class="dis-yes" src="https://cdn3d.iconscout.com/3d/premium/thumb/online-webinars-for-business-4438408-3702585.png" alt="icon" width="100px">
+                            
+                        </div>
+                        <div class="features-one__single-text">
+                            <h5>Interactive Live Webinars</h5>
+                            <p>Safe and trustworthy </p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <!--End Single Features One-->
+
+                <!--Start Single Features One-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-aos="fade-up"
+                 data-aos-duration="2000"
+                    style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;">
+                    <a href="./Course_featuredetail.html">
+                    <div class="features-one__single">
+                        <div class="features-one__single-icon">
+                            <img class="dis-yes" src="https://static.vecteezy.com/system/resources/previews/022/361/452/original/3d-frequently-asked-questions-icon-illustration-render-png.png " alt="icon" width="80px">
+                        </div>
+
+                        <div class="features-one__single-text">
+                            <h5>Previous Years Qs Discussion</h5>
+                            <p>Safe and trustworthy </p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <!--End Single Features One-->
+
+                <!--Start Single Features One-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-aos="fade-up"
+                 data-aos-duration="2500"
+                    style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;">
+                    <a href="./Course_featuredetail.html">
+                    <div class="features-one__single">
+                        <div class="features-one__single-icon">
+                            <img class="dis-yes" src="https://cdn3d.iconscout.com/3d/premium/thumb/sticky-notes-6292787-5175966.png" alt="icon" width="70px">
+                        </div>
+                        <div class="features-one__single-text">
+                            <h5>SBAs, EMQs and HYQs</h5>
+                            <p>Safe and trustworthy </p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <!--End Single Features One-->   
+
+            </div>
+        </div>
+
+        
+    </section>
+    <!-- features ends -->
+
+    <!-- About course-Features -->
+    <section class="container-fluid">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="zoom-in"  data-aos-duration="1500">
+                    <!-- about-us img -->
+                    <img src="./img/dr11(1).png" alt="" class="w-100">
+                </div>
+                <div class="col-md-6" data-aos="zoom-in"  data-aos-duration="2300">
+                    <div class="about-detail">
+
+                        <div class="course-category-title text-left">
+                            <h2 class="h2-subtitle">ABOUT US</h2>
+                            <h2 class="h2-title">We Have Best Online Education</h2>
+                        </div>
+                     <p class="para-justify">
+                                High-definition video is video of higher resolution and quality
+                                than standard-definition. While there is no standardized meaning
+                                for high-definition, generally any video.
+                            </p>
+                            <ul class="list-unstyled flex-c align-items-center courseaddcourse  ">
+                                <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <p class="para-justify">Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                                </li>
+                                <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <p class="para-justify">Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                                </li>
+                                <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <p class="para-justify">Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                                </li>
+                             </ul>
+                        <button class="btn btn-outline-success d-flex align-items-center about-btn " type="submit">
+                            Explore
+                            More</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- end -->
+
+    <!-- counter-start -->
+
+    <!-- ============================= -->
+<section class="bg-blue">
+    <div class="course-category-title text-center" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1000">
+        <h2 class="h2-subtitle">Course Counter</h2>
+        <h2 class="h2-title">Explore Popular Courses</h2>
+    </div>
+<div class=" ">
+    <div class="counters">
+        <div>
+            <!-- box1 -->
+            <div class="counter">
+
+                <div class="counter-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div class="counter-des">
+                    <h2>+ <span data-count="256">0</span></h2>
+                    <h3>Project Completed</h3>
+                </div>
+            
+            </div>
+              <!-- box2 -->
+              <div class="counter">
+
+                <div class="counter-icon">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <div class="counter-des">
+                    <h2>+ <span data-count="500">0</span></h2>
+                    <h3>Student Enrolled</h3>
+                </div>
+            
+            </div>
+
+             <!-- box3 -->
+             <div class="counter">
+
+                <div class="counter-icon">
+                    <i class="fa-solid fa-trophy"></i>  
+                </div>
+                <div class="counter-des">
+                    <h2>+ <span data-count="336">0</span></h2>
+                    <h3>Student Enrolled</h3>
+                </div>      
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+    <!-- counter-end -->
+
+    <!-- section-share know -->
+    <section class="container-fluid ">
+        <div class="container section share-knowledge">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-center p-4" data-aos="zoom-in"  data-aos-duration="1500">
+
+                        <div class="join-mentor">
+                            <h3 class="h2-subtitle">Add Course</h3>
+                            <h3 class="h2-title mb-0 pb-0">Explore Popular Courses</h3>
+                            <!-- <h2>Want to share your knowledge? Join us a Mentor</h2> -->
+                            <p class="para-justify">
+                                High-definition video is video of higher resolution and quality
+                                than standard-definition. While there is no standardized meaning
+                                for high-definition, generally any video.
+                            </p>
+                            <ul class="list-unstyled flex-c align-items-center courseaddcourse  ">
+                                <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <p class="para-justify">Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                                </li>
+                                <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <p class="para-justify">Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                                </li>
+                                <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <p class="para-justify">Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                                </li>
+                             </ul>
+                            <div class="all-btn all-category d-flex align-items-center">
+                                <button class="btn btn-outline-success d-flex align-items-center about-btn "
+                                    type="submit">
+                                    Explore More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="zoom-in"  data-aos-duration="2400">
+                        <div>
+                            <img src="img/banner-img-bg11.png" alt="" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section-share know-end -->
+
+    <!-- testimonial-card -->
+    <section class="container-fluid bg-light">
+        <div class="container">
+
+            <div class="course-category-title text-center" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1000">
+                <h2 class="h2-subtitle">Customer Review</h2>
+                <h2 class="h2-title">What Our Clients Says!</h2>
+            </div>
+            <div class="testimonials">
+                <!-- Swiper Starts-->
+                <div
+                    class="swiper mySwiper swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
+                    <div class="swiper-wrapper" id="swiper-wrapper-8d32d12ef5054aad" aria-live="off"
+                        style="transition-duration: 0ms; transform: translate3d(-2292px, 0px, 0px);">
+                        <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group"
+                            aria-label="1 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -6;">
+                            <div class="card">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn2.iconfinder.com/data/icons/flat-style-svg-icons-part-1/512/user_man_male_profile_account-512.png"
+                                            alt="profile" class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 6.94737; transition-duration: 0ms;">
+                            </div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" role="group"
+                            aria-label="2 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -5;">
+                            <div class="card">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/4128/4128176.png" alt="profile"
+                                            class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 5.94737; transition-duration: 0ms;">
+                            </div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                            data-swiper-slide-index="2" role="group" aria-label="3 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -4;">
+                            <div class="card">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/4128/4128349.png" alt="profile"
+                                            class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 4.94737; transition-duration: 0ms;">
+                            </div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                            data-swiper-slide-index="3" role="group" aria-label="4 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -3;">
+                            <div class="card">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/190/190670.png" alt="profile"
+                                            class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 3.94737; transition-duration: 0ms;">
+                            </div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                        <!-- Card 1 -->
+                        <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" role="group"
+                            aria-label="1 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -2;">
+                            <div class="card" data-aos="zoom-in" data-aos-duration="500">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn2.iconfinder.com/data/icons/flat-style-svg-icons-part-1/512/user_man_male_profile_account-512.png"
+                                            alt="profile" class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 2.94737; transition-duration: 0ms;">
+                            </div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                        <!-- card 2 -->
+                        <div class="swiper-slide swiper-slide-visible" data-swiper-slide-index="1" role="group"
+                            aria-label="2 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -1;">
+                            <div class="card" data-aos="zoom-in" data-aos-duration="700">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/4128/4128176.png" alt="profile"
+                                            class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 1.94737; transition-duration: 0ms;">
+                            </div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="swiper-slide swiper-slide-visible swiper-slide-prev" data-swiper-slide-index="2"
+                            role="group" aria-label="3 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 0;">
+                            <div class="card" data-aos="zoom-in" data-aos-duration="900">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/4128/4128349.png" alt="profile"
+                                            class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 0.947368; transition-duration: 0ms;">
+                            </div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                        <!-- card 4 -->
+                        <div class="swiper-slide swiper-slide-visible swiper-slide-active" data-swiper-slide-index="3"
+                            role="group" aria-label="4 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1;">
+                            <div class="card" data-aos="zoom-in" data-aos-duration="1000">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/190/190670.png" alt="profile"
+                                            class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms;"></div>
+                            <div class="swiper-slide-shadow-right"
+                                style="opacity: 0.0526316; transition-duration: 0ms;"></div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-visible swiper-slide-next"
+                            data-swiper-slide-index="0" role="group" aria-label="1 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 0;">
+                            <div class="card" data-aos="zoom-in" data-aos-duration="1200">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn2.iconfinder.com/data/icons/flat-style-svg-icons-part-1/512/user_man_male_profile_account-512.png"
+                                            alt="profile" class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms;"></div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 1.05263; transition-duration: 0ms;">
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" role="group"
+                            aria-label="2 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -1;">
+                            <div class="card" data-aos="zoom-in">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/4128/4128176.png" alt="profile"
+                                            class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms;"></div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 2.05263; transition-duration: 0ms;">
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                            data-swiper-slide-index="2" role="group" aria-label="3 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -2;">
+                            <div class="card" data-aos="zoom-in" data-aos-duration="1000">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/4128/4128349.png" alt="profile"
+                                            class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms;"></div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 3.05263; transition-duration: 0ms;">
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                            data-swiper-slide-index="3" role="group" aria-label="4 / 4"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -3;">
+                            <div class="card" data-aos="zoom-in">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <div class="testimonial_quotation_box">
+                                        <img src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                                            alt="Quotation" class="quotation-image">
+                                    </div>
+
+
+
+                                    <div class="imgBx">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/190/190670.png" alt="profile"
+                                            class="testimonial_profile-image">
+
+                                    </div>
+                                    <div class="testimonial__star-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+
+                                    <div class="detais">
+                                        <h3><span> Creative Designer</span></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Sapiente deleniti officiis ducimus consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms;"></div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 4.05263; transition-duration: 0ms;">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+                <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"><span
+                        class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span
+                        class="swiper-pagination-bullet"></span><span
+                        class="swiper-pagination-bullet swiper-pagination-bullet-active" aria-current="true"></span>
+                </div>
+                <!-- Swiper Ends  -->
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+
+
+
+
+
+    <!-- =====footer-part==== -->
+    <footer class="position-relative">
+        <!-- news-letter -->
+        <div class="container-fluid new" 
+        data-aos="fade-up"
+        data-aos-duration="1000">
+            <div class="news-letter container  w-100">
+                <div class="row">
+                    <div class="col-md-6 news-letterhead">
+                        <h1>Join our mailing list</h1>
+                    </div>
+                    <div class="col-md-6 input-box position-relative">
+                        <input type="text">
+                        <button class="btn btn-outline-success d-flex align-items-center ">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+
+        <div class="container pt-40">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="head-title">
+                        <h3>About Us</h3>
+                    </div>
+                    <div class="para-footer">
+                        <p class="para-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Veritatis impedit laboriosam nesciunt laborum delectus ex asperiores doloribus nam in
+                            aperiam.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="head-title">
+                        <h3>Quick Links</h3>
+                    </div>
+                    <div class="para-footer">
+                        <ul>
+                            <li>
+                                Home</li>
+                            <li>
+                                About</li>
+                            <li>
+                                Course</li>
+                            <li>
+                                Contact</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="head-title">
+                        <h3>Courses</h3>
+                    </div>
+                    <div class="para-footer">
+                        <ul>
+                            <li>Become a Instructor</li>
+                            <li>Instructor</li>
+                            <li>Student Profile</li>
+                            <li>Library</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="head-title">
+                        <h3>Contact</h3>
+                    </div>
+                    <div class="Address_info">
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i> no:40,Middle Street,new york..</li>
+                            <li><i class="fa-solid fa-phone-volume"></i> 91 3887449854</li>
+                            <li><i class="fa-solid fa-envelope"></i> test@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <p class="para-justify">Copyright © 2023 All right Reserved </p>
+                    </div>
+
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <div class="d-flex icon pos-rel">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-brands fa-skype"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- =====footer-part end==== -->
+
+    <script src="./js/slider.js"></script>
+    <!-- Initialize Swiper -->
+    <!-- Effect coverflow Effect Code -->
+    <script src="./js/owl_slide.js"></script>
+    <script src="./js/Jquery.js" ></script>
+
+    <script>
+        var isAlreadyRun = false;
+        $(window).scroll( function(){
+
+        $('.counter-show').each( function(i){
+
+        var bottom_of_object = $(this).position().top + $(this).outerHeight() / 2;
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        if( bottom_of_window > ( bottom_of_object + 20 )  ){
+			if (!isAlreadyRun) {
+				$('.count-number').each(function () {
+	            $(this).prop('Counter', 0).animate({
+	                    Counter: $(this).text()
+	             }, {
+	                        duration: 3500,
+	                        easing: 'swing',
+	                        step: function (now) {
+	                            $(this).text(Math.ceil(now));
+	                        }
+	                    });
+	            	});
+				}
+                isAlreadyRun = true;
+            }
+    }); 
+
+});
+    </script>
+
+<!-- Code for animation  starts-->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- Code for animation  starts-->
+
+
+<!-- Second slider Script Starts -->
+        <script src="./js/Jquery.js"></script>
+        <script src="./js/poper.js"></script>
+        <!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
+        <script>
+            (function ($) {
+
+                "use strict";
+
+                var fullHeight = function () {
+
+                    $('.js-fullheight').css('height', $(window).height());
+                    $(window).resize(function () {
+                        $('.js-fullheight').css('height', $(window).height());
+                    });
+
+                };
+                fullHeight();
+
+                var carousel = function () {
+                    $('.featured-carousel').owlCarousel({
+                        loop: true,
+                        autoplay: true,
+                        margin: 30,
+                        animateOut: 'fadeOut',
+                        animateIn: 'fadeIn',
+                        nav: true,
+                        dots: true,
+                        autoplayHoverPause: false,
+                        items: 1,
+                        navText: ["<span class='ion-ios-arrow-back'></span>", "<span class='ion-ios-arrow-forward'></span>"],
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 2
+                            },
+                            1000: {
+                                items: 3
+                            }
+                        }
+                    });
+
+                };
+                carousel();
+
+            })(jQuery);
+
+        </script>
+<!-- Second slider Script Ends -->
+
+<!-- counter script -->
+
+<script>
+    const counters = document.querySelectorAll(".counters span");
+    const container = document.querySelector(".counters");
+    
+    //variable that tracks if the counters have been activated
+    let activated = false;
+    
+    //add scroll event to the page
+    window.addEventListener("scroll",()=>{
+        if(pageYOffset > container.offsetTop - container.offsetHeight - 100 && activated === false)
+        {
+            console.log("pageYOffset",pageYOffset ,
+                       "container.offsetTop" ,container.offsetTop,
+                       "container.offsetHeight" , container.offsetHeight ,
+                       "activated",activated );
+            //select all counters
+            counters.forEach(counter =>{
+            //set couynter values to zero
+            counter.innerText = 0;
+            // set count variable to track the count
+    
+            let count = 0;
+    
+            // update count function
+            function updateCount()
+            {
+              const target = parseInt(counter.dataset.count);
+    
+              if(count < target)
+              {
+                count++;
+    
+                counter.innerText = count;
+    
+                setTimeout(updateCount,10)
+              }
+              else{
+                counter.innerText= target;
+              }
+    
+            }
+    
+            //run the function initially
+            updateCount();
+            //set actived to true 
+    
+            activated = true;
+    
+            })
+        }
+        else if(
+            pageYOffset < container.offsetTop - container.offsetHeight - 100 || pageYOffset === 0 && activated === true  
+        )
+        {
+            //select all counters
+            counters.forEach(counter =>{
+                //set counter text back to zero
+                counter.innerText = 0;
+            })
+    
+            // set activated to false
+            activated =  false;
+          
+        }
+    })
+    </script>
+
+
+
+
+</body>
+
+</html>
+

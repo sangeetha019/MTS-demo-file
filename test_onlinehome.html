@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MRCOG</title>
+    <!--favicon-->
+    <link rel="icon" href="admin/assets/images/favicon.png" type="image/png" />
+    <!-- =======css======-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/Swiper.css" />
+    <link rel="stylesheet" href="./css/bubbles-animation.css" />
+    <!-- =======css end====== -->
+
+    <!-- <========font-awesome======> -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+    <!-- <========font-awesome end======> -->
+    <!-- bootsrap-bundle -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+      .card.online-test {
+        padding: 15px;
+        background: #cccccc61;
+        border: none;
+        margin-bottom: 20px;
+      }
+      h2.head {
+        margin-bottom: 20px;
+      }
+
+      .li-mb-10 > li {
+        margin-bottom: 10px;
+      }
+      .d-flex.justify-content-end.align-items-center.p-10 {
+        padding: 10px;
+      }
+
+      .card.test_onlinecard {
+        color: #454f59;
+        background: #fff;
+        border: 1px solid #e9ecef;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+        border-radius: 10px;
+        padding: 24px;
+        margin: 24px 0 0px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+
+      .Question-part {
+        color: #454f59;
+        background: #cccccc61;
+        border: 1px solid #e9ecef;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+        border-radius: 10px;
+        padding: 24px;
+        margin: 0px 0 24px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+      }
+
+      .Question-part > ul > li {
+        margin: 10px 0px;
+      }
+
+      .list-unstyled.pr-10 > li > label {
+        padding-left: 10px;
+      }
+      .pl-10 {
+        padding-left: 10px;
+      }
+
+      .fill_blank {
+        border: none;
+        height: 2em;
+        border-bottom: 2px solid #d4d9dd;
+        width: auto;
+        font-size: 14px;
+        padding: 7px 0 4px;
+        text-indent: 5px;
+        color: #4b5658;
+      }
+
+      .mtb-10 {
+        margin: 15px 0px;
+      }
+
+      .ptb-5 {
+        padding: 5px 0px;
+      }
+    </style>
+  </head>
+  <body class="test-bg">
+    <!-- nav-menu -->
+    <header class="container-fluid">
+      <nav class="navbar fixed-top bg-light navbar-expand-lg py-0 shadow-sm">
+        <div class="container">
+          <a
+            class="navbar-brand"
+            href="#"
+            data-aos="fade-right"
+            data-aos-duration="1900"
+          >
+            <img
+              class="logo-image"
+              src="./img/new_logo.png"
+              alt="Logo_name"
+              srcset=""
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" data-aos="fade-down" data-aos-duration="500">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item" data-aos="fade-down" data-aos-duration="900">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+
+              <li
+                class="nav-item"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <a class="nav-link" href="./course.html">Course</a>
+              </li>
+
+              <li
+                class="nav-item"
+                data-aos="fade-down"
+                data-aos-duration="1200"
+              >
+                <a class="nav-link" href="./Feedback.html">Feedback</a>
+              </li>
+              <li
+                class="nav-item"
+                data-aos="fade-down"
+                data-aos-duration="1400"
+              >
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+            <form
+              class="d-flex"
+              role="search"
+              data-aos="fade-left"
+              data-aos-duration="1900"
+            >
+              <a
+                href="sign-in-sign-up.html"
+                class="btn btn-outline-success w-200"
+                type="submit"
+                ><i class="fa-solid fa-arrow-right-to-bracket"></i> Login /
+                <i class="fa-solid fa-user-plus"></i> Register</a
+              >
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end -->
+
+    <!-- sample test home page -->
+    <section
+      class="container mx-75"
+      data-aos="zoom-in"
+      data-aos-duration="2000"
+      style="margin-top: 100px"
+    >
+      <div class="card test_onlinecard">
+        <h3 class="head m-0">Level-1</h3>
+
+        <span class="head m-0">View Correction</span>
+      </div>
+
+      <div class="card test_onlinecard">
+        <strong> Question 1 of 8 </strong>
+
+        <span> 00.00.00 </span>
+      </div>
+
+      <div class="Question-part">
+        <div class="mtb-10">
+          <h4 class="ptb-5">
+            1)<span class="pl-10">ClassMarker can be used for:-</span>
+          </h4>
+          <ul class="list-unstyled pr-10">
+            <li>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="inlineRadioOptions"
+                id="inlineRadio1"
+                value="option1"
+              />
+              <label class="form-check-label" for="inlineRadio1">
+                <strong>A.</strong> Default checkbox</label
+              >
+            </li>
+            <li>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck2"
+              />
+              <label class="form-check-label" for="defaultCheck2">
+                <strong>B.</strong> Default checkbox
+              </label>
+            </li>
+            <li>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck3"
+              />
+              <label class="form-check-label" for="defaultCheck3">
+                <strong>C.</strong> Default checkbox
+              </label>
+            </li>
+            <li>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck4"
+              />
+              <label class="form-check-label" for="defaultCheck4">
+                <strong>D.</strong> Default checkbox
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mtb-10">
+          <h4 class="ptb-5">
+            2)<span class="pl-10">ClassMarker can be used for:-</span>
+          </h4>
+
+          <div class="input-text">
+            <textarea name="" id="" cols="20" rows="5"></textarea>
+          </div>
+        </div>
+
+        <div class="mtb-10">
+          <h4 class="ptb-5">
+            <pre>3)<code><input type="text" class="fill_blank"> What animal does the woman think is cute?</code></pre>
+          </h4>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center p-10">
+        <a href="./online_teststart.html"
+          ><button
+            class="btn btn-outline-success d-flex justify-content-end align-items-center"
+          >
+            Previous
+          </button></a
+        >
+        <a href=""></a>
+        <button
+          class="btn btn-outline-success d-flex justify-content-end align-items-center"
+        >
+          Continue
+        </button>
+      </div>
+    </section>
+    <!-- end -->
+
+    
+    <!-- =====footer-part==== -->
+    <footer class="position-relative">
+      <!-- news-letter -->
+      <div
+        class="container-fluid new"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div class="news-letter container w-100">
+          <div class="row">
+            <div class="col-md-6 news-letterhead">
+              <h1>Join our mailing list</h1>
+            </div>
+            <div class="col-md-6 input-box position-relative">
+              <input type="text" />
+              <button class="btn btn-outline-success d-flex align-items-center">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+      <div class="container pt-40">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>About Us</h3>
+            </div>
+            <div class="para-footer">
+              <p class="para-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis impedit laboriosam nesciunt laborum delectus ex
+                asperiores doloribus nam in aperiam.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>Ouick Links</h3>
+            </div>
+            <div class="para-footer">
+              <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Course</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>Courses</h3>
+            </div>
+            <div class="para-footer">
+              <ul>
+                <li>Become a Instructor</li>
+                <li>Instructor</li>
+                <li>Student Profile</li>
+                <li>Library</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>Contact</h3>
+            </div>
+            <div class="Address_info">
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i> no:40,Middle
+                  Street,new york..
+                </li>
+                <li><i class="fa-solid fa-phone-volume"></i> 91 3887449854</li>
+                <li><i class="fa-solid fa-envelope"></i> test@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 d-flex align-items-center">
+              <p class="para-justify">Copyright © 2023 All right Reserved</p>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-end">
+              <div class="d-flex icon pos-rel">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-skype"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- =====footer-part end==== -->
+
+    <script src="./js/slider.js"></script>
+    <!-- Initialize Swiper -->
+    <!-- Effect coverflow Effect Code -->
+    <script src="./js/owl_slide.js"></script>
+
+    <script src="./js/Jquery.js"></script>
+
+    <!-- Code for animation  starts-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Code for animation  ends-->
+  </body>
+</html>

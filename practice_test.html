@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <title>MRCOG</title>
+    <!--favicon-->
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/fontawesome/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/plugins/feather/feather.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css"> -->
+ 
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  <style>
+
+   .practice_card-container{
+    border-top: #cc2525 5px solid;
+    border-radius: 5px;
+    }
+
+   .practice_card{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   }
+
+   .practice_card h3{
+   color: #F66962;
+   }
+
+
+  </style>
+
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- nav-menu -->
+      <header class="container-fluid">
+        <nav class="navbar fixed-top bg-light navbar-expand-lg py-0 shadow-sm">
+          <div class="container">
+            <a
+              class="navbar-brand"
+              href="#"
+              data-aos="fade-right"
+              data-aos-duration="1900"
+            >
+              <img
+                class="logo-image"
+                src="./img/new_logo.png"
+                alt="Logo_name"
+                srcset=""
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li
+                  class="nav-item"
+                  data-aos="fade-down"
+                  data-aos-duration="500"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    >Home</a
+                  >
+                </li>
+                <li
+                  class="nav-item"
+                  data-aos="fade-down"
+                  data-aos-duration="900"
+                >
+                  <a class="nav-link" href="./about.html">About</a>
+                </li>
+
+                <li
+                  class="nav-item"
+                  data-aos="fade-down"
+                  data-aos-duration="1000"
+                >
+                  <a class="nav-link" href="./course.html">Course</a>
+                </li>
+
+                <li
+                  class="nav-item"
+                  data-aos="fade-down"
+                  data-aos-duration="1200"
+                >
+                  <a class="nav-link" href="./Feedback.html">Feedback</a>
+                </li>
+                <li
+                  class="nav-item"
+                  data-aos="fade-down"
+                  data-aos-duration="1400"
+                >
+                  <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+              </ul>
+              <form
+                class="d-flex"
+                role="search"
+                data-aos="fade-left"
+                data-aos-duration="1900"
+              >
+                <a
+                  href="sign-in-sign-up.html"
+                  class="btn btn-outline-success w-200"
+                  type="submit"
+                  ><i class="fa-solid fa-arrow-right-to-bracket"></i> Login /
+                  <i class="fa-solid fa-user-plus"></i> Register</a
+                >
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- end -->
+
+      <!-- Course Header starts -->
+      <div class="course-student-header" style="margin-top: 100px">
+        <div class="container">
+          <div class="student-group">
+            <div class="course-group">
+              <div class="course-group-img d-flex">
+                <a
+                  href="student-profile.html"
+                  data-aos="zoom-in"
+                  data-aos-duration="2000"
+                  ><img
+                    src="assets/img/user/user11.jpg"
+                    alt=""
+                    class="img-fluid"
+                /></a>
+                <div class="d-flex align-items-center">
+                  <div class="course-name">
+                    <h4 data-aos="zoom-in" data-aos-duration="2000">
+                      <a href="student-profile.html">Rolands R</a
+                      ><span>Beginner</span>
+                    </h4>
+                    <p data-aos="zoom-in" data-aos-duration="2000">Student</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="course-share"
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+              >
+                <a href="student-profile.html" class="btn btn-primary"
+                  >Account Settings</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="my-student-list">
+            <ul>
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a  href="student-dashboard.html">Dashboard</a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1600">
+                <a href="course-student.html">Courses</a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1800">
+                <a href="purchase-history.html">Purchase history</a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1800">
+                <a class="active" href="practice_test.html">Test</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Course Header Ends-->
+
+
+
+      
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+            <!-- Card 1 starts -->
+            <div class="col-lg-4">
+                <a href="practice_test1.html">
+                    <div class="card practice_card-container">
+                        <div class="card-content">
+                          <div class="card-body">
+                            <div class="media d-flex justify-content-between">
+                              <div class="align-self-center" style="
+                              font-size: 42px;
+                              color: #7a7a7a;">
+                                <i class="fa-solid fa-pen"></i>
+                              </div>
+                              <div class="media-body text-right practice_card">
+                                <h3>278</h3>
+                                <span>Practise Test</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 1 Ends -->
+    
+            <!-- Card 2 starts -->
+            <div class="col-lg-4">
+             <a href="practice_test2.html"> 
+                <div class="card practice_card-container">
+                    <div class="card-content">
+                      <div class="card-body">
+                        <div class="media d-flex justify-content-between">
+                          <div class="align-self-center" style="
+                          font-size: 42px;
+                          color: #7a7a7a;">
+                            <i class="fa-solid fa-file-lines"></i>
+                          </div>
+                          <div class="media-body text-right practice_card" >
+                            <h3>278</h3>
+                            <span>Mock Test</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div></a>
+                   
+            </div>
+            <!-- Card 2 Ends -->           
+        </div>
+    </div>
+    </div>
+
+    <!-- =====footer-part==== -->
+     <footer class="position-relative">
+        <!-- news-letter -->
+        <div
+          class="container-fluid new"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="news-letter container w-100">
+            <div class="row">
+              <div class="col-md-6 news-letterhead">
+                <h1>Join our mailing list</h1>
+              </div>
+              <div class="col-md-6 input-box position-relative">
+                <input type="text" />
+                <button class="btn btn-outline-success d-flex align-items-center">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+  
+        <div class="container pt-40">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="head-title">
+                <h3>About Us</h3>
+              </div>
+              <div class="para-footer">
+                <p class="para-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veritatis impedit laboriosam nesciunt laborum delectus ex
+                  asperiores doloribus nam in aperiam.
+                </p>
+              </div>
+            </div>
+  
+            <div class="col-md-3">
+              <div class="head-title">
+                <h3>Quick Links</h3>
+              </div>
+              <div class="para-footer">
+                <ul>
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Course</li>
+                  <li>Contact</li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="col-md-3">
+              <div class="head-title">
+                <h3>Courses</h3>
+              </div>
+              <div class="para-footer">
+                <ul>
+                  <li>Become a Instructor</li>
+                  <li>Instructor</li>
+                  <li>Student Profile</li>
+                  <li>Library</li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="col-md-3">
+              <div class="head-title">
+                <h3>Contact</h3>
+              </div>
+              <div class="Address_info">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-location-dot"></i> no:40,Middle
+                    Street,new york..
+                  </li>
+                  <li><i class="fa-solid fa-phone-volume"></i> 91 3887449854</li>
+                  <li><i class="fa-solid fa-envelope"></i> test@gmail.com</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 d-flex align-items-center">
+                <p class="para-justify">Copyright © 2023 All right Reserved</p>
+              </div>
+  
+              <div class="col-md-6 d-flex justify-content-end">
+                <div class="d-flex icon pos-rel">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <i class="fa-brands fa-skype"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     </footer>
+    <!-- =====footer-part end==== -->
+
+    <script
+      data-cfasync="false"
+      src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Code for animation  starts-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Code for animation  ends-->
+  </body>
+</html>

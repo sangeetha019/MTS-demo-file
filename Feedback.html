@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--favicon-->
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+    <!-- =======css======-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- =======css end====== -->
+
+    <!-- <========font-awesome======> -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+    <!-- <========font-awesome end======> -->
+    <!-- bootsrap-bundle -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/Swiper.css" />
+
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      .testimonials {
+        position: relative;
+        max-width: 100%;
+        margin-top: 40px;
+      }
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 340px;
+        min-height: 400px;
+        margin: 0 20px;
+      }
+
+      .swiper-3d,
+      .swiper-3d.swiper-css-mode .swiper-wrapper {
+        perspective: none;
+      }
+      .testimonial_profile-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-3d .swiper-slide-shadow-left,
+      .swiper-3d .swiper-slide-shadow-right {
+        background-image: none;
+      }
+      .testimonials .card {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 50px 40px 30px;
+        text-align: center;
+        overflow: hidden;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border: none;
+      }
+      .testimonials .card .layer {
+        position: absolute;
+        top: calc(100% - 2px);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: 0.5s;
+      }
+      .testimonials .card:hover .layer {
+        top: 0;
+      }
+      .testimonials .card .content {
+        position: relative;
+        z-index: 2;
+      }
+      .testimonials .card .content p {
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 6px;
+        color: #111;
+        padding: 0 6px;
+      }
+      .testimonials .card .content .imgBx {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #fff;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        background: #b286ec;
+      }
+
+      .testimonials .card .content h3 span {
+        color: #0060ff;
+        font-size: 14px;
+        transition: 0.5s;
+      }
+      .testimonials .card:hover .content h3 span {
+        color: #111;
+      }
+      @media (max-width: 991px) {
+        section {
+          padding: 14px;
+        }
+
+        .testimonials .card {
+          padding: 38px 14px 16px;
+        }
+      }
+      .testimonial_quotation_box {
+        position: relative;
+      }
+      .quotation-image {
+        position: absolute;
+        width: 50px;
+        filter: opacity(0.5);
+        left: 21px;
+        top: -17px;
+      }
+      .testimonial__star-icon {
+        color: #f4c803;
+        font-size: 16px;
+        margin: 17px 0 6px;
+      }
+      .testimonial__star-icon i {
+        color: #f4c803;
+      }
+      @media (max-width: 567px) {
+        .swiper-slide {
+          width: 272px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav-menu -->
+    <header class="container-fluid">
+      <nav class="navbar fixed-top bg-light navbar-expand-lg py-0 shadow-sm">
+        <div class="container">
+          <a
+            class="navbar-brand"
+            href="#"
+            data-aos="fade-right"
+            data-aos-duration="1900"
+          >
+            <img
+              class="logo-image"
+              src="./img/new_logo.png"
+              alt="Logo_name"
+              srcset=""
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" data-aos="fade-down" data-aos-duration="500">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item" data-aos="fade-down" data-aos-duration="900">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+
+              <li
+                class="nav-item"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <a class="nav-link" href="./course.html">Course</a>
+              </li>
+
+              <li
+                class="nav-item"
+                data-aos="fade-down"
+                data-aos-duration="1200"
+              >
+                <a class="nav-link" href="./Feedback.html">Feedback</a>
+              </li>
+              <li
+                class="nav-item"
+                data-aos="fade-down"
+                data-aos-duration="1400"
+              >
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+            <form
+              class="d-flex"
+              role="search"
+              data-aos="fade-left"
+              data-aos-duration="1900"
+            >
+              <a
+                href="sign-in-sign-up.html"
+                class="btn btn-outline-success w-200"
+                type="submit"
+                ><i class="fa-solid fa-arrow-right-to-bracket"></i> Login /
+                <i class="fa-solid fa-user-plus"></i> Register</a
+              >
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end -->
+
+    <section class="bread_crumbs" style="margin-top: 100px">
+      <div class="bread-crumbs container">
+        <div class="col-md-12" data-aos="zoom-in" data-aos-duration="2000">
+          <div
+            class="bread-crumbs-content d-flex justify-content-center align-items-center"
+          >
+            <h2 class="position-absolute">Clients Feedbacks</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VEDIO-CARD POPUP -->
+    <!-- course-start -->
+    <section class="container-fluid">
+      <div class="container">
+        <div
+          class="course-category-title text-center"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="2000"
+        >
+          <h2 class="h2-subtitle">Our Clients</h2>
+          <h2 class="h2-title">
+            Video feedbacks of our Successful candidates.
+          </h2>
+        </div>
+        <div class="row">
+          <!-- card 1 -->
+          <div
+            class="col-lg-4 col-md-12 col-sm-12"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+          >
+            <div class="card-course p-2 mt-5 rounded-0 h-auto">
+              <div class="course-img position-relative">
+                <div class="Feedback icon-course">
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <img
+                  src="./img/crd-img2.webp"
+                  alt=""
+                  class="img-responsive"
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                />
+              </div>
+              <a href="http://"
+                ><h3 class="card-title text-center my-3">Dr. Deepeka T S</h3></a
+              >
+            </div>
+          </div>
+          
+          <!-- card 2 -->
+          <div
+            class="col-lg-4 col-md-12 col-sm-12"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+          >
+            <div class="card-course p-2 mt-5 rounded-0 h-auto">
+              <div class="course-img position-relative">
+                <div class="Feedback icon-course">
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <img
+                  src="./img/crd-img2.webp"
+                  alt=""
+                  class="img-responsive"
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                />
+              </div>
+              <a href="http://"
+                ><h3 class="card-title text-center my-3">Dr. Deepeka T S</h3></a
+              >
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div
+            class="col-lg-4 col-md-12 col-sm-12"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+          >
+            <div class="card-course p-2 mt-5 rounded-0 h-auto">
+              <div class="course-img position-relative">
+                <div class="Feedback icon-course">
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <img
+                  src="./img/crd-img2.webp"
+                  alt=""
+                  class="img-responsive"
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                />
+              </div>
+              <a href="http://"
+                ><h3 class="card-title text-center my-3">Dr. Deepeka T S</h3></a
+              >
+            </div>
+          </div>
+
+          <!-- card 4 -->
+          <div
+            class="col-lg-4 col-md-12 col-sm-12"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+          >
+            <div class="card-course p-2 mt-5 rounded-0 h-auto">
+              <div class="course-img position-relative">
+                <div class="Feedback icon-course">
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <img
+                  src="./img/crd-img2.webp"
+                  alt=""
+                  class="img-responsive"
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                />
+              </div>
+              <a href="http://"
+                ><h3 class="card-title text-center my-3">Dr. Deepeka T S</h3></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end -->
+
+    <!-- --- Testimonials Section --- -->
+    <div class="testi_section">
+      <div
+        class="course-category-title text-center"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
+        <h2 class="h2-subtitle">Testimonials</h2>
+        <h2 class="h2-title">What Our Clients Say!</h2>
+      </div>
+
+      <div class="testi_container">
+        <!-- card 1 -->
+        <div class="testi_card" data-aos="zoom-in" data-aos-duration="1500">
+          <img
+            src="https://www.pngall.com/wp-content/uploads/4/Quotation-Symbol-PNG.png"
+            class="quote"
+          />
+          <p>
+            "What do you need to start a business? Three simple things know your
+            product as better to me, and have a burning desire to succeed."
+          </p>
+          <div class="test_person">
+            <img
+              src="./img/user1.jpg"
+              width="60px"
+              style="border-radius: 50%"
+            />
+            <div class="name_desig">
+              <h4>David Smith</h4>
+              <p>Full Stack Developer</p>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="testi_card" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="https://www.pngall.com/wp-content/uploads/4/Quotation-Symbol-PNG.png"
+            class="quote"
+          />
+          <p>
+            "What do you need to start a business? Three simple things know your
+            product as better to me, and have a burning desire to succeed."
+          </p>
+          <div class="test_person">
+            <img
+              src="./img/user1.jpg"
+              width="60px"
+              style="border-radius: 50%"
+            />
+            <div class="name_desig">
+              <h4>David Smith</h4>
+              <p>Full Stack Developer</p>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="testi_card" data-aos="zoom-in" data-aos-duration="2500">
+          <img
+            src="https://www.pngall.com/wp-content/uploads/4/Quotation-Symbol-PNG.png"
+            class="quote"
+          />
+          <p>
+            "What do you need to start a business? Three simple things know your
+            product as better to me, and have a burning desire to succeed."
+          </p>
+          <div class="test_person">
+            <img
+              src="./img/user1.jpg"
+              width="60px"
+              style="border-radius: 50%"
+            />
+            <div class="name_desig">
+              <h4>David Smith</h4>
+              <p>Full Stack Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END -->
+
+    <!-- modal-popup -->
+
+    <section class="container">
+      <div
+        class="course-category-title text-center"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
+        <h2 class="h2-subtitle">Customer Review</h2>
+        <h2 class="h2-title">What Our Clients Says!</h2>
+      </div>
+      <div class="testimonials">
+        <!-- Swiper Starts-->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                  <div class="testimonial_quotation_box">
+                    <img
+                      src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                      alt="Quotation"
+                      class="quotation-image"
+                    />
+                  </div>
+
+                  <div class="imgBx">
+                    <img
+                      src="https://cdn2.iconfinder.com/data/icons/flat-style-svg-icons-part-1/512/user_man_male_profile_account-512.png"
+                      alt="profile"
+                      class="testimonial_profile-image"
+                    />
+                  </div>
+                  <div class="testimonial__star-icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+
+                  <div class="detais">
+                    <h3><span> Creative Designer</span></h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sapiente deleniti officiis ducimus consequuntur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                  <div class="testimonial_quotation_box">
+                    <img
+                      src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                      alt="Quotation"
+                      class="quotation-image"
+                    />
+                  </div>
+
+                  <div class="imgBx">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/4128/4128176.png"
+                      alt="profile"
+                      class="testimonial_profile-image"
+                    />
+                  </div>
+                  <div class="testimonial__star-icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+
+                  <div class="detais">
+                    <h3><span> Creative Designer</span></h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sapiente deleniti officiis ducimus consequuntur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                  <div class="testimonial_quotation_box">
+                    <img
+                      src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                      alt="Quotation"
+                      class="quotation-image"
+                    />
+                  </div>
+
+                  <div class="imgBx">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/4128/4128349.png"
+                      alt="profile"
+                      class="testimonial_profile-image"
+                    />
+                  </div>
+                  <div class="testimonial__star-icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+
+                  <div class="detais">
+                    <h3><span> Creative Designer</span></h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sapiente deleniti officiis ducimus consequuntur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card 4 -->
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                  <div class="testimonial_quotation_box">
+                    <img
+                      src="https://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-md.png"
+                      alt="Quotation"
+                      class="quotation-image"
+                    />
+                  </div>
+
+                  <div class="imgBx">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/190/190670.png"
+                      alt="profile"
+                      class="testimonial_profile-image"
+                    />
+                  </div>
+                  <div class="testimonial__star-icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+
+                  <div class="detais">
+                    <h3><span> Creative Designer</span></h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sapiente deleniti officiis ducimus consequuntur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <!-- Swiper Ends  -->
+      </div>
+    </section>
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: 0px">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="video-wrapper">
+              <iframe
+                width="100%"
+                height="338"
+                src="https://www.youtube.com/embed/7w0DU_58FV0"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end -->
+
+    <!-- =====footer-part==== -->
+    <footer class="position-relative">
+      <!-- news-letter -->
+      <div
+        class="container-fluid new"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div class="news-letter container w-100">
+          <div class="row">
+            <div class="col-md-6 news-letterhead">
+              <h1>Join our mailing list</h1>
+            </div>
+            <div class="col-md-6 input-box position-relative">
+              <input type="text" />
+              <button class="btn btn-outline-success d-flex align-items-center">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+      <div class="container pt-40">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>About Us</h3>
+            </div>
+            <div class="para-footer">
+              <p class="para-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis impedit laboriosam nesciunt laborum delectus ex
+                asperiores doloribus nam in aperiam.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>Quick Links</h3>
+            </div>
+            <div class="para-footer">
+              <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Course</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>Courses</h3>
+            </div>
+            <div class="para-footer">
+              <ul>
+                <li>Become a Instructor</li>
+                <li>Instructor</li>
+                <li>Student Profile</li>
+                <li>Library</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="head-title">
+              <h3>Contact</h3>
+            </div>
+            <div class="Address_info">
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i> no:40,Middle
+                  Street,new york..
+                </li>
+                <li><i class="fa-solid fa-phone-volume"></i> 91 3887449854</li>
+                <li><i class="fa-solid fa-envelope"></i> test@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 d-flex align-items-center">
+              <p class="para-justify">Copyright © 2023 All right Reserved</p>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-end">
+              <div class="d-flex icon pos-rel">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-skype"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- =====footer-part end==== -->
+  </body>
+
+  <script src="./js/slider.js"></script>
+  <!-- Initialize Swiper -->
+  <!-- Effect coverflow Effect Code -->
+  <script src="./js/owl_slide.js"></script>
+
+  <!-- Code for animation  starts-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- Code for animation  ends-->
+</html>
